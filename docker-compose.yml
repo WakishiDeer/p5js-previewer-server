@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node_env:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        - PROJECT_ROOT=$PWD
+    ports:
+      - "8080:8080"
+#    volumes:
+#      - "./:/usr/web/p5_previewer"
+    tty: true
